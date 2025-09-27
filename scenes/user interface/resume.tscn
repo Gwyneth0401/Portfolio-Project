@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://djuj6kt81n13v"]
+
+[ext_resource type="Texture2D" uid="uid://crd66w4bag8r3" path="res://graphics/resume.png" id="1_xn2n4"]
+[ext_resource type="FontFile" uid="uid://denhbgf8lrhn2" path="res://fonts/PressStart2P-Regular.ttf" id="2_mijm5"]
+
+[node name="Resume" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223103, 0.223103, 0.223103, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_xn2n4")
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mijm5")
+theme_override_font_sizes/font_size = 7
+text = "Press Esc to close"
+horizontal_alignment = 1
+autowrap_mode = 2

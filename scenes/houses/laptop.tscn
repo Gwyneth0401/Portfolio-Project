@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp4emejx3y16t"]
+
+[ext_resource type="Script" path="res://scenes/houses/laptop.gd" id="1_8bl44"]
+[ext_resource type="Texture2D" uid="uid://b7ogjtnkw8sm8" path="res://graphics/house/InteriorTilesLITE.png" id="1_x5k6f"]
+[ext_resource type="FontFile" uid="uid://denhbgf8lrhn2" path="res://fonts/PressStart2P-Regular.ttf" id="3_kn30f"]
+[ext_resource type="PackedScene" uid="uid://cjukdymmgs8ej" path="res://scenes/user interface/laptop_menu.tscn" id="3_qye08"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_si8qe"]
+size = Vector2(8, 8)
+
+[node name="Laptop" type="Area2D"]
+script = ExtResource("1_8bl44")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -66.0
+offset_top = -21.0
+offset_right = 74.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_kn30f")
+theme_override_font_sizes/font_size = 8
+text = "Press F"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_x5k6f")
+region_enabled = true
+region_rect = Rect2(70.6146, 269.386, 20.0482, 20.0482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_si8qe")
+
+[node name="LaptopMenu" parent="." instance=ExtResource("3_qye08")]
+
+[connection signal="menu_closed" from="LaptopMenu" to="." method="_on_laptop_menu_menu_closed"]

@@ -1,0 +1,37 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b8q4kgj3fqw5l"]
+
+[ext_resource type="Texture2D" uid="uid://gmsr8x2c22cj" path="res://graphics/house/Wooden_House_Walls_Tilset.png" id="1_rfgqj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jffb1"]
+texture = ExtResource("1_rfgqj")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.9375, -8, 8, -8, 8, 8, 3, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, -2.91681, 8, -2.91682)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.9375, -8, -8, -8, -8, 8, -3, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, -3.09359, 8, -3.0052, -2.91682, 8, -2.91682)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, 3.09359, 8, 3.0052, -2.91682, -8, -2.91682)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.9375, -8, 8, -8, 8, 8, 3, 8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.9375, -8, -8, -8, -8, 8, -3, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.9375, -8, 8, -8, 8, 8, 3, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.9375, -8, -8, -8, -8, 8, -3, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.91682, -8, -2.91682)
+
+[resource]
+physics_layer_0/collision_layer = 2
+sources/5 = SubResource("TileSetAtlasSource_jffb1")
