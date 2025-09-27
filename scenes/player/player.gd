@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var joystick = $"../MobileControls/Joystick"
 
 var can_move = true		# allow/disallow movement
 
@@ -13,6 +14,10 @@ func _physics_process(_delta: float) -> void:
 	
 	# Read directional input
 	var direction = Input.get_vector("left", "right", "up", "down")
+	
+	if joystick.visible and joystick.direction != Vector2.ZERO:
+		direction = joystick.direction
+	
 	velocity = direction * speed
 	
 	# Play correct animation

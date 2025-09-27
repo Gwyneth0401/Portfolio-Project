@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5c67uxbo7jkk"]
+
+[ext_resource type="Script" path="res://scenes/user interface/joystick.gd" id="1_u66l1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfnwy"]
+bg_color = Color(6.257e-06, 0.668062, 0.802132, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65bpd"]
+bg_color = Color(0.3223, 0.829872, 0.906219, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MobileControls" type="CanvasLayer"]
+layer = 0
+
+[node name="Joystick" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.8
+anchor_right = 0.2
+anchor_bottom = 0.8
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("1_u66l1")
+
+[node name="Base" type="Panel" parent="Joystick"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfnwy")
+
+[node name="Knob" type="Panel" parent="Joystick/Base"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_65bpd")

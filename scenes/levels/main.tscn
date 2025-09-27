@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch8gqqnaigtha"]
+[gd_scene load_steps=7 format=3 uid="uid://ch8gqqnaigtha"]
 
 [ext_resource type="PackedScene" uid="uid://cl5qskhwu73n" path="res://scenes/player/player.tscn" id="1_0ut27"]
 [ext_resource type="Script" path="res://scenes/levels/main.gd" id="1_d2xua"]
 [ext_resource type="PackedScene" uid="uid://cshcd4vh7sh6o" path="res://scenes/houses/house.tscn" id="1_d8p1i"]
 [ext_resource type="PackedScene" uid="uid://bp4emejx3y16t" path="res://scenes/houses/laptop.tscn" id="3_m2mpx"]
+[ext_resource type="PackedScene" uid="uid://c5c67uxbo7jkk" path="res://scenes/user interface/mobile_controls.tscn" id="6_b0eno"]
 [ext_resource type="PackedScene" uid="uid://drcw54wmyve8y" path="res://scenes/user interface/dialog_ui.tscn" id="6_w73xb"]
 
 [node name="Main" type="Node2D"]
@@ -18,6 +19,8 @@ position = Vector2(238, 186)
 position = Vector2(88, 55)
 
 [node name="DialogBox" parent="." instance=ExtResource("6_w73xb")]
+
+[node name="MobileControls" parent="." instance=ExtResource("6_b0eno")]
 
 [connection signal="menu_closed" from="Laptop" to="." method="_on_laptop_menu_closed"]
 [connection signal="menu_opened" from="Laptop" to="." method="_on_laptop_menu_opened"]
