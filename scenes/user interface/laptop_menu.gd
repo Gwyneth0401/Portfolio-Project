@@ -6,7 +6,7 @@ signal menu_closed
 @onready var description_label = $MenuPanel/VBoxContainer/BottomSection/MarginContainer/Label
 
 var options = [
-	{"name": "Resume", "desc": "Learn more about me from my resume"},
+	{"name": "Resume", "desc": "Learn more about me from my resume. Will be opened in new browser."},
 	{"name": "Exit", "desc": "Close the laptop and return to the room"}
 ]
 
@@ -35,8 +35,6 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_up") and current_index != 0:
 		current_index -= 1
 		_update_selection(current_index)
-	elif event.is_action_pressed("ui_accept"):
-		_on_option_selected(current_index)
 
 func _update_selection(index: int) -> void:
 	current_index = index
@@ -55,7 +53,8 @@ func _update_selection(index: int) -> void:
 func _on_option_selected(index: int) -> void:
 	match options[index].name:
 		"Resume":
-			print("Open resume") 
+			# Open resume PDF in a new browser tab
+			OS.shell_open("https://gwyneth0401.github.io/Portfolio-Project/assets/resume.pdf")
 		"Exit":
 			menu_closed.emit()
 
