@@ -14,3 +14,7 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignore all export folders except your HTML5 export
+export/*
+!export/web/
