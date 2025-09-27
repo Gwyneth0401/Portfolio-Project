@@ -5,7 +5,7 @@ signal dialog_finished
 
 @export var dialog_lines = [
 	"Hi, I'm Windy!", 
-	"Welcome to my portfolio house!",
+	"Welcome to my portfolio house! (Mobile controls are not suppported yet.)",
 	"Feel free to look around. You can interact with the laptop.",
 	"This portfolio is still under development. More features will be added in the future."
 ]
